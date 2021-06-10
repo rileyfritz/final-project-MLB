@@ -12,7 +12,8 @@ Predict MLB World Series winners based off of regular season performance using p
 ## Instructions to use this repo:
 
 ## Reference
-Data taken from [Stathead Baseball](https://stathead.com/baseball/team-season-finder.cgi?request=1&match=single&order_by_asc=0&order_by=HR&year_min=1980&year_max=2021&output_type=standard&type=b)
+Data taken from [Stathead Baseball.](https://stathead.com/baseball/team-season-finder.cgi?request=1&match=single&order_by_asc=0&order_by=HR&year_min=1980&year_max=2021&output_type=standard&type=b)
+This is a subscription based baseball statistic database but a month-long free trial is available for accessing and downloading data.
 
 
 
