@@ -1,0 +1,44 @@
+*{
+    margin: o;
+    padding: 0%;
+
+
+}
+.header
+{
+    height: 100vh;
+}
+.navbar-style
+{
+    box-shadow: 0 5px 10px #efefef;
+    text-transform: uppercase;
+}
+.logo
+{
+    height: 1;
+    padding: 2px 10px;
+   
+}
+.icon-bar
+{
+    background: darkorange;
+}
+li a
+{
+    color: #333;
+}
+
+
+
+
+body {
+    background-image: url("https://wallpapertag.com/wallpaper/middle/c/1/4/113851-softball-backgrounds-2185x1080-computer.jpg");
+    height: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
