@@ -89,12 +89,9 @@ function buildTable(data) {
         third = data.third_prediction[i];
         trow.append("td").third;
         
-        actual = data.Team[i];
+        actual = data.actual[i];
         trow.append("td").actual;
 
-        // console.log(text(year))
-        // trow.append("td").text(data[i].Team);
-        // console.log(text(data.Year[i]));       
      
      
     }
