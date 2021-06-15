@@ -14,20 +14,42 @@ d3.json('/nn_predictions.json').then(function (data) {
         trow = tbody.append("tr");
 
         year = data.Year[i];
-        // console.log(year)
-        trow.append("td").text(year);
-
         first = data.first_prediction[i];
-        trow.append("td").text(first);
-
         second = data.second_prediction[i];
-        trow.append("td").text(second);
-
         third = data.third_prediction[i];
-        trow.append("td").text(third);
-
         actual = data.actual[i];
-        trow.append("td").text(actual);
+
+        if (actual === first || actual === second || actual === third) {
+            var css_class = 'trpass';
+        }
+        else { var css_class = 'trfail'
+        }
+
+        trow.append("td").text(year).attr('class',css_class);
+        
+        if (actual === first) {
+            trow.append("td").text(first).attr('class', 'bold');
+        }
+        else {
+            trow.append("td").text(first).attr('class',css_class)
+        }
+        
+        if (actual === second) {
+            trow.append("td").text(second).attr('class', 'bold');
+        }
+        else {
+            trow.append("td").text(second).attr('class',css_class)
+        }   
+
+        if (actual === third) {
+            trow.append("td").text(third).attr('class', 'bold');
+        }
+        else {
+            trow.append("td").text(third).attr('class',css_class)
+        }   
+
+        trow.append("td").text(actual).attr('class',css_class);
+            
     }
 });
 
