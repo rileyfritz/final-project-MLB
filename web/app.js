@@ -1,6 +1,7 @@
 
 d3.json('/nn_predictions.json').then(function (data) {
     console.log(data);
+    console.log('function called')
 
     var tableLength = Object.keys(data.Year).length
     console.log(tableLength);
@@ -51,7 +52,6 @@ d3.json('/nn_predictions.json').then(function (data) {
         trow.append("td").text(actual).attr('class',css_class);
             
     }
-
 });
 
 function filterbuttons(year) {
@@ -69,9 +69,23 @@ function filterbuttons(year) {
                 first = data.first_prediction[i-1];
                 second = data.second_prediction[i-1];
                 third = data.third_prediction[i-1];
+                actual = data.actual[i-1];
                 
+                document.getElementById("pred").innerHTML = `${year} Predictions`;
+                document.getElementById("firstpred").innerHTML = `1. ${first}`;
+                document.getElementById("secondpred").innerHTML = `2. ${second}`;
+                document.getElementById("thirdpred").innerHTML = `3. ${third}`;
+                document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first}.png' height='200'>`
 
-                
+                if (first === actual) {
+                    document.getElementById("result").innerHTML = "<img src='../images/logos/green.png' height='200'>"
+                }
+                else {
+                    document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' height='200'>"
+
+                }
+                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual}.png' height='200'>`
+
                 break
             }
         }

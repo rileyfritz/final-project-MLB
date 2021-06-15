@@ -14,7 +14,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="./app.js"></script>
     <script type = "text/javascript" src="app.js"></script>  
 
 
@@ -59,35 +58,38 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <button type="button" class="btn btn-primary" onclick="filterbuttons(2000)">2000</button>
-                    <button type="button" class="btn btn-primary">2001</button>
-                    <button type="button" class="btn btn-primary">2002</button>
-                    <button type="button" class="btn btn-primary">2003</button>
-                    <button type="button" class="btn btn-primary">2004</button>
-                    <button type="button" class="btn btn-primary">2005</button>
-                    <button type="button" class="btn btn-primary">2006</button>
-                    <button type="button" class="btn btn-primary">2007</button>
-                    <button type="button" class="btn btn-primary">2008</button>
-                    <button type="button" class="btn btn-primary">2009</button>
-                    <button type="button" class="btn btn-primary">2010</button>
-                    <button type="button" class="btn btn-primary">2011</button>
-                    <button type="button" class="btn btn-primary">2012</button>
-                    <button type="button" class="btn btn-primary">2013</button>
-                    <button type="button" class="btn btn-primary">2014</button>
-                    <button type="button" class="btn btn-primary">2015</button>
-                    <button type="button" class="btn btn-primary">2016</button>
-                    <button type="button" class="btn btn-primary">2017</button>
-                    <button type="button" class="btn btn-primary">2018</button>
-                    <button type="button" class="btn btn-primary">2019</button>
-                    <button type="button" class="btn btn-primary">2020</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2001)">2001</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2002)">2002</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2003)">2003</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2004)">2004</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2005)">2005</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2006)">2006</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2007)">2007</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2008)">2008</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2009)">2009</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2010)">2010</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2011)">2011</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2012)">2012</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2013)">2013</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2014)">2014</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2015)">2015</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2016)">2016</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2017)">2017</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2018)">2018</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2019)">2019</button>
+                    <button type="button" class="btn btn-primary" onclick="filterbuttons(2020)">2020</button>
                 </div>
-                <div id="topthree" class="col-sm-2">
-
+                <div id="topthree" class="col-sm-3">
+                    <h2 id="pred">Predictions:</h1>
+                    <h3 id="firstpred"></h2>
+                    <h3 id="secondpred"></h2>
+                    <h3 id="thirdpred"></h2>
                 </div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2"></div>
+                <div id="predimg" class="col-sm-2"></div>
+                <div id="result" class="col-sm-2"></div>
+                <div id="actimg" class="col-sm-2"></div>
 
             </div>
             <div class="row">
