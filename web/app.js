@@ -51,5 +51,30 @@ d3.json('/nn_predictions.json').then(function (data) {
         trow.append("td").text(actual).attr('class',css_class);
             
     }
+
 });
 
+function filterbuttons(year) {
+    d3.json('/nn_predictions.json').then(function (data) {
+        // console.log(data);
+        
+        var table = document.getElementById("nn-table");
+        var tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) {
+
+            // console.log(tr[i]);
+            var tdYear = tr[i].getElementsByTagName("td")[0].innerText;
+            if (tdYear == year) {
+                first = data.first_prediction[i-1];
+                second = data.second_prediction[i-1];
+                third = data.third_prediction[i-1];
+                
+
+                
+                break
+            }
+        }
+    });
+    // console.log(year);
+};

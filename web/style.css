@@ -46,7 +46,10 @@ tr {
     background-color: rgb(190, 229, 190);
 }
 
-
+.btn {
+    padding: 7px;
+    margin: 7px;
+}
 
 body {
     background-image: url("https://wallpapertag.com/wallpaper/middle/c/1/4/113851-softball-backgrounds-2185x1080-computer.jpg");
