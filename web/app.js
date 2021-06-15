@@ -1,7 +1,6 @@
 
 d3.json('/nn_predictions.json').then(function (data) {
     console.log(data);
-    console.log('function called')
 
     var tableLength = Object.keys(data.Year).length
     console.log(tableLength);
@@ -49,9 +48,48 @@ d3.json('/nn_predictions.json').then(function (data) {
             trow.append("td").text(third).attr('class',css_class)
         }   
 
-        trow.append("td").text(actual).attr('class',css_class);
-            
+        trow.append("td").text(actual).attr('class',css_class);   
     }
+
+    // function sortTable() for sorting html table was found here: https://www.w3schools.com/howto/howto_js_sort_table.asp
+    function sortTable() {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("nn-table");
+        switching = true;
+        /* Make a loop that will continue until
+        no switching has been done: */
+        while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i < (rows.length - 1); i++) {
+            // Start by saying there should be no switching:
+            shouldSwitch = false;
+            /* Get the two elements you want to compare,
+            one from current row and one from the next: */
+            x = rows[i].getElementsByTagName("TD")[0];
+            y = rows[i + 1].getElementsByTagName("TD")[0];
+            // Check if the two rows should switch place:
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            // If so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+            }
+        }
+        if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark that a switch has been done: */
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+        }
+        }
+    }
+
+    sortTable();
+   
+
 });
 
 function filterbuttons(year) {
@@ -60,31 +98,39 @@ function filterbuttons(year) {
         
         var table = document.getElementById("nn-table");
         var tr = table.getElementsByTagName("tr");
+        var tableLength = Object.keys(data.Year).length
 
         for (i = 1; i < tr.length; i++) {
 
-            // console.log(tr[i]);
             var tdYear = tr[i].getElementsByTagName("td")[0].innerText;
             if (tdYear == year) {
-                first = data.first_prediction_fn[i-1];
-                second = data.second_prediction_fn[i-1];
-                third = data.third_prediction_fn[i-1];
-                actual = data.actual_fn[i-1];
-                
+
+                for (var j = 0; j < tableLength; j++) {
+                    if (data.Year[j] == year) {
+                        first = data.first_prediction_fn[j];
+                        second = data.second_prediction_fn[j];
+                        third = data.third_prediction_fn[j];
+                        actual = data.actual_fn[j];
+                        first_abbr = data.first_prediction[j];
+                        actual_abbr = data.actual[j];
+
+                    }
+                        
+                };
                 document.getElementById("pred").innerHTML = `${year} Predictions`;
                 document.getElementById("firstpred").innerHTML = `1. ${first}`;
                 document.getElementById("secondpred").innerHTML = `2. ${second}`;
                 document.getElementById("thirdpred").innerHTML = `3. ${third}`;
-                document.getElementById("predimg").innerHTML = `<img src='../images/logos/${data.first_prediction[i-1]}.png' height='200'>`
+                document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr}.png' height='200'>`
 
                 if (first === actual) {
-                    document.getElementById("result").innerHTML = "<img src='../images/logos/green.png' height='200'>"
+                    document.getElementById("result").innerHTML = "<img src='../images/logos/green.png' width='200px'>"
                 }
                 else {
-                    document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' height='200'>"
+                    document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' width='200px'>"
 
                 }
-                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${data.actual[i-1]}.png' height='200'>`
+                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual_abbr}.png' width='200px'>`
 
                 break
             }
