@@ -15,10 +15,10 @@ d3.json('/nn_predictions.json').then(function (data) {
         trow = tbody.append("tr");
 
         year = data.Year[i];
-        first = data.first_prediction[i];
-        second = data.second_prediction[i];
-        third = data.third_prediction[i];
-        actual = data.actual[i];
+        first = data.first_prediction_fn[i];
+        second = data.second_prediction_fn[i];
+        third = data.third_prediction_fn[i];
+        actual = data.actual_fn[i];
 
         if (actual === first || actual === second || actual === third) {
             var css_class = 'trpass';
@@ -66,16 +66,16 @@ function filterbuttons(year) {
             // console.log(tr[i]);
             var tdYear = tr[i].getElementsByTagName("td")[0].innerText;
             if (tdYear == year) {
-                first = data.first_prediction[i-1];
-                second = data.second_prediction[i-1];
-                third = data.third_prediction[i-1];
-                actual = data.actual[i-1];
+                first = data.first_prediction_fn[i-1];
+                second = data.second_prediction_fn[i-1];
+                third = data.third_prediction_fn[i-1];
+                actual = data.actual_fn[i-1];
                 
                 document.getElementById("pred").innerHTML = `${year} Predictions`;
                 document.getElementById("firstpred").innerHTML = `1. ${first}`;
                 document.getElementById("secondpred").innerHTML = `2. ${second}`;
                 document.getElementById("thirdpred").innerHTML = `3. ${third}`;
-                document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first}.png' height='200'>`
+                document.getElementById("predimg").innerHTML = `<img src='../images/logos/${data.first_prediction[i-1]}.png' height='200'>`
 
                 if (first === actual) {
                     document.getElementById("result").innerHTML = "<img src='../images/logos/green.png' height='200'>"
@@ -84,7 +84,7 @@ function filterbuttons(year) {
                     document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' height='200'>"
 
                 }
-                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual}.png' height='200'>`
+                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${data.actual[i-1]}.png' height='200'>`
 
                 break
             }
