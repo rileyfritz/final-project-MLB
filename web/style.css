@@ -59,6 +59,32 @@ body {
     background-size: cover;
 }
 
+.predimgs {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, 0%);
+}
 
+.predimgsb {
+    width: 100%;
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, 0%);
+}
+
+.nn-desc {
+    background-color: white;
+}
 
 

@@ -121,16 +121,23 @@ function filterbuttons(year) {
                 document.getElementById("firstpred").innerHTML = `1. ${first}`;
                 document.getElementById("secondpred").innerHTML = `2. ${second}`;
                 document.getElementById("thirdpred").innerHTML = `3. ${third}`;
-                document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr}.png' height='200'>`
+
+                if (first == 'San Francisco Giants' || 'Atlanta Braves') {
+                    document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr}.png' class='predimgsb'> <h4>Prediction</h4>`
+                }
+
+                else {
+                    document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr}.png' class='predimgs'><h4>Prediction</h4>`
+                }
 
                 if (first === actual) {
-                    document.getElementById("result").innerHTML = "<img src='../images/logos/green.png' width='200px'>"
+                    document.getElementById("result").innerHTML = "<img src='../images/logos/green.png' width='120px'>"
                 }
                 else {
-                    document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' width='200px'>"
+                    document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' width='120px'>"
 
                 }
-                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual_abbr}.png' width='200px'>`
+                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual_abbr}.png' class='predimgs'><h4>Actual</h4>`
 
                 break
             }
