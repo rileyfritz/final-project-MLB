@@ -87,4 +87,17 @@ body {
     background-color: white;
 }
 
+.nnimg {
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 

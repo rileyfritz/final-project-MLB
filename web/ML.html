@@ -101,13 +101,28 @@
 
             <div class="row">
 
-                <div class="col-md-6 nn-desc">
+                <div class="col" style="background-color: white;">
                     <h1>How the neural network works:</h1>
-                    <p> The neural network was created with an input later, one hidden layer, and an output layer. The input layer contains 19 inputs of various baseball team stats. The hidden layer contains 4 nodes and the output contains two.</p>
+                    <p style="font-size: large;"> The neural network was created with an input later, two hidden layers, and an output layer. The input layer contains 19 inputs of various baseball team stats. The hidden layers contain 1000 nodes and the output contains two. This resulted in <b> 1,000,000 trainable parameters.</b> The input and hidden layers activation function was chosen as Relu and the output layer used Softmax. The loss function was chosen as categorical crossentropy and the ADAM optimizer was used. This configuration produced an <b>accuracy of 95% on the testing sets.</b> A simplified schematic of the structure of the neural network is shown below.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col nnimg">
+                    <img  class="nnimg center" src="../images/nn.png">
                 </div>
 
-                <div class="col-md-6 nn-desc">
-                    <img src="th.jpg">
+            </div>
+
+            <div class="row">
+
+                <div class="col" style="background-color: white;">
+                    <h1>Step 1: Preprocessing the data</h1>
+                    <p style="font-size: large;"> </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col nnimg">
+                    <img  class="nnimg center" src="../images/nnjn0.png">
                 </div>
 
             </div>
