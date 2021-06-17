@@ -111,6 +111,21 @@ body {
     background-color: white;
 }
 
+
+.nnimg {
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
 .col-sm-4{
     background-color: white;
     padding-top: 20px;
@@ -136,4 +151,5 @@ body {
 .content.bg-white {
     margin-top: 15px;
 }
+
 

@@ -9,6 +9,8 @@ d3.json('../nn_predictions.json').then(function (data) {
     var table = d3.select("#nn-table");
     var tbody = table.select("tbody");
     var trow;
+    var correct_count = 0;
+    var topthree_count = 0;
 
     for (var i = 0; i < tableLength; i++) {
         trow = tbody.append("tr");
@@ -18,6 +20,7 @@ d3.json('../nn_predictions.json').then(function (data) {
         second = data.second_prediction_fn[i];
         third = data.third_prediction_fn[i];
         actual = data.actual_fn[i];
+        
 
         if (actual === first || actual === second || actual === third) {
             var css_class = 'trpass';
@@ -29,6 +32,8 @@ d3.json('../nn_predictions.json').then(function (data) {
         
         if (actual === first) {
             trow.append("td").text(first).attr('class', 'bold');
+            correct_count++;
+            topthree_count++;
         }
         else {
             trow.append("td").text(first).attr('class',css_class)
@@ -36,6 +41,8 @@ d3.json('../nn_predictions.json').then(function (data) {
         
         if (actual === second) {
             trow.append("td").text(second).attr('class', 'bold');
+            topthree_count++;
+
         }
         else {
             trow.append("td").text(second).attr('class',css_class)
@@ -43,6 +50,8 @@ d3.json('../nn_predictions.json').then(function (data) {
 
         if (actual === third) {
             trow.append("td").text(third).attr('class', 'bold');
+            topthree_count++;
+
         }
         else {
             trow.append("td").text(third).attr('class',css_class)
@@ -50,6 +59,12 @@ d3.json('../nn_predictions.json').then(function (data) {
 
         trow.append("td").text(actual).attr('class',css_class);   
     }
+    console.log(correct_count);
+    console.log(topthree_count);
+
+    document.getElementById("correct_cnt").innerHTML = correct_count;
+    document.getElementById("topthree_cnt").innerHTML = topthree_count;
+
 
     // function sortTable() for sorting html table was found here: https://www.w3schools.com/howto/howto_js_sort_table.asp
     function sortTable() {
