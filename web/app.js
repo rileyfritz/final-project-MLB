@@ -138,11 +138,11 @@ function filterbuttons(year) {
                 document.getElementById("thirdpred").innerHTML = `3. ${third}`;
 
                 if (first == 'San Francisco Giants' || 'Atlanta Braves') {
-                    document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr}.png' class='predimgsb'> <h4>Prediction</h4>`
+                    document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr.toLowerCase()}.png' class='predimgsb'> <h4>Prediction</h4>`
                 }
 
                 else {
-                    document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr}.png' class='predimgs'><h4>Prediction</h4>`
+                    document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr.toLowerCase()}.png' class='predimgs'><h4>Prediction</h4>`
                 }
 
                 if (first === actual) {
@@ -152,7 +152,7 @@ function filterbuttons(year) {
                     document.getElementById("result").innerHTML = "<img src='../images/logos/red.png' width='120px'>"
 
                 }
-                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual_abbr}.png' class='predimgs'><h4>Actual</h4>`
+                document.getElementById("actimg").innerHTML = `<img src='../images/logos/${actual_abbr.toLowerCase()}.png' class='predimgs'><h4>Actual</h4>`
 
                 break
             }
