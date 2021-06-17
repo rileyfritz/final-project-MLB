@@ -143,6 +143,8 @@ function filterbuttons(year) {
 
                 else {
                     document.getElementById("predimg").innerHTML = `<img src='../images/logos/${first_abbr.toLowerCase()}.png' class='predimgs'><h4>Prediction</h4>`
+                    console.log(first_abbr);
+                    console.log(first_abbr.toLowerCase())
                 }
 
                 if (first === actual) {
