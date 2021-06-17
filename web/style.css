@@ -64,8 +64,11 @@ tr {
     border: none;
 }
 
+.bodyimage {
+    background-image: url("https://www.denverpost.com/wp-content/uploads/2018/10/World-Series-Dodgers-Red-Sox-Baseball.jpg?w=620");
+}
+
 body {
-    background-image: url("https://wallpapertag.com/wallpaper/middle/c/1/4/113851-softball-backgrounds-2185x1080-computer.jpg");
     height: 1200px;
     background-position: center;
     background-repeat: no-repeat;
@@ -111,7 +114,10 @@ body {
     background-color: white;
 }
 
-
+#nnbod {
+    background-color: wheat;
+    background-image: "";
+}
 .nnimg {
     background-color: white;
     display: block;
