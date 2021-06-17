@@ -1,5 +1,5 @@
 
-d3.json('/nn_predictions.json').then(function (data) {
+d3.json('../nn_predictions.json').then(function (data) {
     console.log(data);
 
     var tableLength = Object.keys(data.Year).length
@@ -93,7 +93,7 @@ d3.json('/nn_predictions.json').then(function (data) {
 });
 
 function filterbuttons(year) {
-    d3.json('/nn_predictions.json').then(function (data) {
+    d3.json('../nn_predictions.json').then(function (data) {
         // console.log(data);
         
         var table = document.getElementById("nn-table");
