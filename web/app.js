@@ -62,8 +62,8 @@ d3.json('../nn_predictions.json').then(function (data) {
     console.log(correct_count);
     console.log(topthree_count);
 
-    document.getElementById("correct_cnt").innerHTML = correct_count;
-    document.getElementById("topthree_cnt").innerHTML = topthree_count;
+    document.getElementById("correctcnt").innerHTML = `${correct_count}/21`;
+    document.getElementById("topthreecnt").innerHTML = `${topthree_count}/21`;
 
 
     // function sortTable() for sorting html table was found here: https://www.w3schools.com/howto/howto_js_sort_table.asp
