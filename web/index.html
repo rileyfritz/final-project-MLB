@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-
 <head>
-
     <title> MLB</title>
     <link rel="stylesheet" href="style.css">
-
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="app.js"></script>
-
+ <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 
 
     <header class="header">
@@ -27,20 +20,16 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
-
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-
 
 
                 </button>
 
-
                 <!--<a href=""><img class="logo" src="th.jpg"></a>-->
                 <a href=""><img class="logo" src="th.jpg"></a>
                 
-
             </div>
             <div class="collapse navbar-collapse" id="micon">
             <ul class="nav navbar-nav navbar-right">
@@ -54,38 +43,41 @@
         </div>
         </div>
     </nav>
-
-    <div class="container">
+    <div class="container content">
         <div class="row">
-            <div class="col-sm-6">
-                <h1>Predicting MLB World Series winners using ML</h1>
-                <p>  Predict MLB World Series winners based off of regular season performance
-                    Find a classification problem and then compare and contrast the results of logistic regression vs. decision trees vs. KNN vs. SVM.
+            <div class="col-sm-4">
+                    <h3>WORLD SERIES PREDICTOR</h3>
+                    <img class="img-thumbnail float-center" src="/web/catcher.jpg" width="50%" alt="index">
+                    <p>  Predicting who will win the World Series is no small feat.
+                         Try our prediction model and see how accurate we are.
                     </p>
-
-            </div>
-
-            <div class="col-sm-6">
-                <p class="text-responsive">Pre-steps with dataset:
-                    Stats: 
-                    Wins 
-                    Runs scored
-                    On-base percentage (OBP) - Formula: (Hits + Walks + Hit By Pitch) divided by (At-bats + Walks + Hit By Pitch + Sacrifices)
-                    Earned run average - Formula: 9 multiplied by (Earned Runs Allowed divided by Innings Pitched.
-                    Walks & hits per inning pitched (WHIP) - Formula: Walks + Hits divided by Innings Pitched
-                    Fielding percentage/fielding average - Formula: total number of putouts and assists by a defender, divided by the total number of chances (putouts, assists and errors.
-                    Batting average - Formula: Hits divided by At-bats, rounded up to the third decimal place
-                    Home run average - Formula: At-bats divided by Home Runs
-                    Slugging percentage - Formula: Total number of bases divided by At-bats
-                    Isolated power - Formula: Slugging Percentage minus Batting Average
-                    Weighted on-base average, or On-base plus slugging - Formula: On-base percentage plus Slugging percentage
-                    Saves 
-                    Fielding independent pitching - formula is (13*HR+3*(HBP+BB)-2*K)/IP 
+                </div>
                     
-                    </p>
+   
+            <div class="col-sm-8">
+                <h3>Stats, Stats, Stats, and more Stats!</h3>
+                    <p> Baseball is enshrined with over a hundred years of thousands of seasons of leagues and games 
+                    and legendary players.  Behind all of those games, players, and championship endings lies a trailblazing history of the most
+                    advanced sports statistics that started as fun slash lines that rated players and seperated the good, the bad, the greats, and 
+                    the game-changers. The stats behind baseball player and team statistics have become so advanced that the term "sabermetrics" was 
+                    coined from baseball statisticians.  The evolution of baseball's stats and models are still advancing today and are the catalyst for Major League baseball business decisions.  Even a box office
+                    hit movie named "Moneyball" was made to tell a real life depiction of sabermetrics following the 2002 Oakland Athletics.</p>
+                    
+                    <p>Below is a sample list of just some of the MLB Team statistics that we will be using in a neural network machine learning model
+                    that will try to predict the MLB World Series winner for each season from 2000 to 2020.  The data is sourced from a dataset that 
+                    provides many combined stats for each MLB team in each of those seasons.</p>
 
+                    <h5> Sample of Stats:</h5> 
+                    <h5>Wins</h5>    
+                    <h5>Runs scored</h5>
+                    <h5>On-base percentage (OBP)</h5>
+                    <h5>Walks plus Hits plus Innings Pitched (WHIP)</h5>
+                    <h5>Earned Run Average</h5>
+                    <h5>Battin Average</h5>
+                    <h5>Slugging Percentage</h5>
+                    
+                
             </div>
-
         </div>
     </div>
 </body>

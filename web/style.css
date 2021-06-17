@@ -2,7 +2,6 @@
     margin: o;
     padding: 0%;
 
-
 }
 .header
 {
@@ -12,6 +11,14 @@
 {
     box-shadow: 0 5px 10px #efefef;
     text-transform: uppercase;
+}
+/* navbar styling*/
+a.navbar-brand{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgb(135, 133, 228);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
 }
 .logo
 {
@@ -27,9 +34,11 @@ li a
 {
     color: #333;
 }
-
-
-
+/* image styling*/
+.img-thumbnail{
+    padding:10px;
+    border: none;
+}
 
 body {
     background-image: url("https://wallpapertag.com/wallpaper/middle/c/1/4/113851-softball-backgrounds-2185x1080-computer.jpg");
@@ -38,7 +47,41 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.col-md-12{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom:40px;
+    
+}
+.col-md-6{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom:40px;
+}
 
+.col-sm-4{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom:40px;
+}
 
+.col-sm-8{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom:40px;
+}
 
+/* content styling*/
+.content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+/* image border styling*/
+.pic{
+    border: 3px solid rgb(81, 175, 160);
+}
+.content.bg-white {
+    margin-top: 15px;
+}
 
