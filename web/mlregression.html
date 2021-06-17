@@ -56,47 +56,46 @@
 
   <!-- start of main body -->
   <main>
-    <div class="container">
+    <div id="container">
       <br>
       <div class="row">
-        <div class="col col-12 col-md-12 divbdy">
+        <div class="col col-12 col-md-12 divbdy" style="color:black">
           <br>
-          <h1>Multivariate Linear Regression</h1>
+          <h1>Multiple Linear Regression</h1>
           <hr>
-          <a target="_blank" href="../images/JNBScreenshot1.png">
-          <img src="../images/JNBScreenshot1.png" alt="Multivariate linear regression" width="800"></a>
-          <p></p>
-          <p></p>
-          <a target="_blank" href="../images/JNBScreenshot2.png">
-            <img src="../images/JNBScreenshot2.png" alt="Multivariate linear regression" width="800"></a>
-            <p></p>
-            <p></p>
-            <a target="_blank" href="../images/JNBScreenshot3.png">
-                <img src="../images/JNBScreenshot3.png" alt="Multivariate linear regression" width="800"></a>
-                <p></p>
-                <p></p>
-                <a target="_blank" href="../images/JNBScreenshot4.png">
-                    <img src="../images/JNBScreenshot4.png" alt="Multivariate linear regression" width="800"></a>
-                    <p></p>
-                    <p></p>
-                    <a target="_blank" href="../images/JNBScreenshot5.png">
-                        <img src="../images/JNBScreenshot5.png" alt="Multivariate linear regression" width="800"></a>
-                        <p></p>
-                        <p></p>
-                        <a target="_blank" href="../images/JNBScreenshot6.png">
-                            <img src="../images/JNBScreenshot6.png" alt="Multivariate linear regression" width="800"></a>
-                            <p></p>
-                            <p></p>
-                            <a target="_blank" href="../images/JNBScreenshot7.png">
-                                <img src="../images/JNBScreenshot7.png" alt="Multivariate linear regression" width="800"></a>
-                                <p></p>
-                                <p></p>
-                                <a target="_blank" href="../images/JNBScreenshot8.png">
-                                    <img src="../images/JNBScreenshot8.png" alt="Multivariate linear regression" width="800"></a>
-                                    <p></p>
-                                    <p></p>
-          <hr>
-        </div>
+            <p>By using this method, we want to see how wins correlate to 19 statistical 
+                variables for each team. From those results, create and train a model to predict wins.</p>
+            <a target="_blank" href="../images/residual plot1.png">
+                <img src="../images/residual plot1.png" alt="Team Wins to stat variables" width="550"></a>
+                        <p>After assembling the dataset, I used plotly and scikit-learn to plot team wins vs. team 
+                    stats. After the model was scaled and fitted, then trained to the 
+                    training data, I calculated the scores for the training and testing data: </p>
+                        <p>Training Score: 0.10250841407489408 
+                        <p>Testing Score: -0.03936315633854104</p>
+                    <p>These scores indicate a very weak correlation between team wins to team stats, and the model would poorly
+                        predict team wins. The above residual plot also indicates this as well.
+                    </p>
+                </p>
+            <a target="_blank" href="../images/residual plot2.png">
+                <img src="../images/residual plot2.png" alt="Team Win-Loss % to stat variables" width="550"></a>
+                    <p>Another attempt was made to look at a different component to better predict teams win. I used plotly and scikit-learn to plot team 
+                        win-loss % vs. team stats (19 statistical variables). After the model was scaled and fitted, then trained to the 
+                        training data, I calculated the scores for the training and testing data: </p>
+                        <p>Training Score: 0.8834962024251878 
+                        <p>Testing Score: 0.8923338300921946</p>
+                    <p>In comparison to the results above, these scores indicate a strong correlation between team win-loss % to team stats, 
+                        and the model would improve tremendously in predicting team win-loss percentages. The above residual plot also indicates this as well.
+                    </p>
+                        <p>Lasso Model: 
+                        MSE: 0.09651704263996216, R2: 0.8848423207066405
+                            </p>
+                        <p>ElasticNet Model:
+                         MSE: 0.09520531535484084, R2: 0.8864073859623574
+                            </p>
+                        </p>
+                    <hr>
+                </div>
+            <hr>
         </div>
     </div>
 </body>
