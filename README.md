@@ -1,8 +1,9 @@
 # final-project-MLB
 Bootcamp final project - Machine learning for MLB World Series 
 
-
 Group 5: Riley Fritz, Edris Gemtessa, Brian Halvorson, Jacqueline Meyer 
+
+Here is the link: https://rileyfritz.github.io/final-project-MLB/
 
 ![Big Bend National Park](https://kaxmedia.com/cdn-cgi/image/w=480,f=auto/https://objects.kaxmedia.com/auto/o/72731/95904994f2.jpeg)
 
