@@ -17,11 +17,7 @@
 <script src="app.js"></script>
 
 </head>
-
 <body>
-
-
-
     <header class="header">
     <nav class="navbar navbar-style">
         <div class="container">
@@ -55,49 +51,78 @@
     </nav>
 
   <!-- start of main body -->
-  <main>
-    <div id="container">
-      <br>
-      <div class="row">
-        <div class="col col-12 col-md-12 divbdy" style="color:black">
-          <br>
-          <h1>Multiple Linear Regression</h1>
-          <hr>
-            <p>By using this method, we want to see how wins correlate to 19 statistical 
-                variables for each team. From those results, create and train a model to predict wins.</p>
-            <a target="_blank" href="../images/residual plot1.png">
-                <img src="../images/residual plot1.png" alt="Team Wins to stat variables" width="550"></a>
-                        <p>After assembling the dataset, I used plotly and scikit-learn to plot team wins vs. team 
-                    stats. After the model was scaled and fitted, then trained to the 
-                    training data, I calculated the scores for the training and testing data: </p>
-                        <p>Training Score: 0.10250841407489408 
-                        <p>Testing Score: -0.03936315633854104</p>
-                    <p>These scores indicate a very weak correlation between team wins to team stats, and the model would poorly
-                        predict team wins. The above residual plot also indicates this as well.
-                    </p>
-                </p>
-            <a target="_blank" href="../images/residual plot2.png">
-                <img src="../images/residual plot2.png" alt="Team Win-Loss % to stat variables" width="550"></a>
-                    <p>Another attempt was made to look at a different component to better predict teams win. I used plotly and scikit-learn to plot team 
-                        win-loss % vs. team stats (19 statistical variables). After the model was scaled and fitted, then trained to the 
-                        training data, I calculated the scores for the training and testing data: </p>
-                        <p>Training Score: 0.8834962024251878 
-                        <p>Testing Score: 0.8923338300921946</p>
-                    <p>In comparison to the results above, these scores indicate a strong correlation between team win-loss % to team stats, 
-                        and the model would improve tremendously in predicting team win-loss percentages. The above residual plot also indicates this as well.
-                    </p>
-                        <p>Lasso Model: 
-                        MSE: 0.09651704263996216, R2: 0.8848423207066405
-                            </p>
-                        <p>ElasticNet Model:
-                         MSE: 0.09520531535484084, R2: 0.8864073859623574
-                            </p>
-                        </p>
-                    <hr>
-                </div>
-            <hr>
-        </div>
+  <div class="col col-12 col-md-12 divbdy" style="color:black">
+    <br>
+    <h1>Overview</h1>
+    <hr>
+      <p style="font-size: large;">
+        Create a multivariate linear regression to look at the correlation between team wins and team stats by using plotly and scikit-learn.
+        From those results, we can train and test a model to predict the dependent variable (team wins from 2000-2020) given values from the 
+        independent variables (19 stats of each team every year by season end). 
     </div>
-</body>
-        
-</html>
+</div>
+<div class="col col-12 col-md-12 divbdy" style="color:black"></div>
+<h2>Step 1: Preprocessing the data</h2>
+<hr>
+</div>
+<div class="row">
+<div class="col nnimg">
+    <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot1.png">
+</div>
+</div>
+<div class="row">
+<div class="col nnimg">
+    <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot2.png">
+</div>
+</div>
+<div class="col col-12 col-md-12 divbdy" style="color:black"></div>
+<br>
+<h2>Step 2: Assigning values & creating a model to train/fit/test</h2>
+<hr>
+<div class="row">
+    <div class="col nnimg">
+        <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot3.png">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col nnimg">
+        <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot4.png">
+    </div>
+    </div>
+    <div class="col col-12 col-md-12 divbdy" style="color:black"></div>
+    <br>
+    <h2>Step 3: Make predictions</h2>
+    <hr>
+    <div class="row">
+        <div class="col nnimg">
+            <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot5.png">
+        </div>
+        </div>
+        <div class="row">
+        <div class="col nnimg">
+            <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot6.png">
+        </div>
+        </div>
+        <div class="row">
+            <div class="col nnimg">
+                <img class="nnimg center" style="height: auto;width: 95%;" src="../images/JNBScreenshot7.png">
+            </div>
+            </div>
+    <div class="col col-12 col-md-12 divbdy" style="color:black"></div>
+        <br>
+        <h2>Outcome</h2>
+        <hr>
+        <p style="font-size: large;">
+            All indicators show the model is insufficient in predicting team wins. 
+        </div>
+    <div class="col col-12 col-md-12 divbdy" style="color:black">
+        <br>
+        <h2>Future Considerations</h2>
+        <hr>
+        <p style="font-size: large;">
+            <p style="font-size: large;">- Look at every number of combinations amoung the 19 stat variables and create a model using best combos.</p>
+            <p style="font-size: large;">- Only look at the 8 teams who go into playoffs every year rather than use all 32 teams.</p> 
+            <p style="font-size: large;">- Remove 2020 data.</p>
+        </div>
+    </body>
+</html>       
